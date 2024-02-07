@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gap</title>
+</head>
+<body>
+  
+  <style>
+    
+    .parent {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      max-width: 200px;
+
+      /* y, x */
+      /* gap: 10px 20px;  */
+      row-gap: 10px;
+      column-gap: 20px;
+    }
+
+    .children {
+      background-color: red;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      width: 50px;
+    }
+
+  </style>
+
+  <ul class="parent">
+    <li class="children"></li>
+    <li class="children"></li>
+    <li class="children"></li>
+    <li class="children"></li>
+    <li class="children"></li>
+    <li class="children"></li>
+  </ul>
+
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gap" taget="_blank">doc</a>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables</title>
+</head>
+<body>
+
+  <style>
+
+    :root {
+      /* Variável com escopo global */
+      --margin-size: 20px;
+    }
+
+    @property --radius-size {
+      syntax: "<integer>";
+      inherits: false;
+      initial-value: 0px;
+    }
+
+    .square {
+      /* Variável com escopo local */
+      --size: 48px;
+      background-color: red;
+      border-radius: var(--radius-size); /* usando @property */
+      margin: var(--margin-size);
+      width: var(--size);
+      height: var(--size);
+    }
+
+    .square--with-radius {
+      /* usando @property */
+      --radius-size: 10px;
+      border-radius: var(--radius-size);
+    }
+
+  </style>
+
+  <div class="square"></div>
+  <div class="square square--with-radius"></div>
+
+
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank">doc</a>
+</body>
+</html>
